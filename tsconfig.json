@@ -9,6 +9,9 @@
     "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
+    "paths": {
+      "@/core/*": ["./src/core/*"],
+    },
     "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
