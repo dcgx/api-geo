@@ -1,0 +1,15 @@
+version: "3.1"
+
+services:
+  apiorg_pg:
+    image: postgres:15.1
+    container_name: apiorg_pg
+    restart: always
+    environment:
+      POSTGRES_USER: apiorg
+      POSTGRES_PASSWORD: apiorg
+      POSTGRES_DB: apiorg
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - 5432:5432
